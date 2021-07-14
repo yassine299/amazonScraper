@@ -1,11 +1,13 @@
 const express = require("express");
 const request = require("request-promise");
+const cors = require("cors");
 require("dotenv/config");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 const apiKey = process.env.apiKey;
 const baseUrl = `https://api.scraperapi.com?api_key=${apiKey}&autoparse=true`;
+app.use(cors());
 
 //const generetUrlscraper = (apikey) => {
 //  `https://api.scraperapi.com?api_key=${apiKey}&autoparse=true`
