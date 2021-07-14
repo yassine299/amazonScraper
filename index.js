@@ -17,7 +17,7 @@ app.use(express.json());
 
 
 app.get("/", (req, res) => {
-    res.send("express ");
+    res.send("welcome to amazon scrapper that can get you some informations ");
 })
 
 //Get api details
