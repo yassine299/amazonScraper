@@ -1,5 +1,6 @@
 const express = require("express");
 const request = require("request-promise");
+const path = require("path");
 const cors = require("cors");
 require("dotenv/config");
 
@@ -17,7 +18,7 @@ app.use(express.json());
 
 
 app.get("/", (req, res) => {
-    res.send("welcome to amazon scrapper that can get you some informations ");
+    res.sendFile(path.join(__dirname, "/index.html"));
 })
 
 //Get api details
